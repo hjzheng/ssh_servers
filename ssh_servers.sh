@@ -22,7 +22,7 @@ select o in "${opts[@]}"
 do
   if [[ $o =~ [0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}$ ]]; then
         selectedParam=`echo ${params[$REPLY-1]} | tr _ ' '`
-        echo ${selectedParam}
+        echo 'login ...'
         ${FILE_PATH}/login.exp ${selectedParam}
         break
   else
